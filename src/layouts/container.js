@@ -130,19 +130,19 @@ export default class Container extends Component {
                         <div className="row">
                             <div className="col-lg-10 offset-lg-1">
                                 <div className="row">
-                                    <div className="col-lg-3 text-center">
+                                    <div className="col-lg-3 text-lg-center">
                                         <img src="assests/img/icon_1.png" alt="" className="img-fluid why-icon" data-aos="zoom-in"/>
                                         <h3 className="why-title">500 кв. м</h3>
                                     </div>
-                                    <div className="col-lg-3 text-center">
+                                    <div className="col-lg-3 text-lg-center">
                                         <img src="assests/img/icon_2.png" alt="" className="img-fluid why-icon" data-aos="zoom-in" data-aos-delay="100"/>
                                         <h3 className="why-title">Доступ к бесплатному коворкингу</h3>
                                     </div>
-                                    <div className="col-lg-3 text-center">
+                                    <div className="col-lg-3 text-lg-center">
                                         <img src="assests/img/icon_3.png" alt="" className="img-fluid why-icon" data-aos="zoom-in" data-aos-delay="200"/>
                                         <h3 className="why-title">Помощь менторов 24/7</h3>
                                     </div>
-                                    <div className="col-lg-3 text-center">
+                                    <div className="col-lg-3 text-lg-center">
                                         <img src="assests/img/icon_4.png" alt="" className="img-fluid why-icon" data-aos="zoom-in" data-aos-delay="300"/>
                                         <h3 className="why-title">Уютная и добрая атмосфера</h3>
                                     </div>

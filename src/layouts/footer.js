@@ -124,7 +124,7 @@ export default class Footer extends Component{
                             <label>Ваш номер телефона</label>
                             <div className="input-group mb-3">
                                 <span className="input-group-text" id="basic-addon1">
-                                    <select className="form-select">
+                                    <select className="form-select special">
                                         <option>+996</option>
                                         <option>+1</option>
                                         <option>+91</option>
