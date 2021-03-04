@@ -50,12 +50,12 @@ export default class Header extends Component{
               <li className="nav-item">
                 <a href="#courses" onClick={()=>this.handleClick('#courses')} className={`nav-link ${this.state.active == '#courses'? 'active': ''}`}>Курсы</a>
               </li>
-              <li className="nav-item">
-                <a href="#why" onClick={()=>this.handleClick('#why')} className={`nav-link ${this.state.active == '#why'? 'active': ''}`}>Почему</a>
-              </li> 
               {/* <li className="nav-item">
-                <a href="#online" onClick={()=>this.handleClick('#online')} className={`nav-link ${this.state.active == '#online'? 'active': ''}`}>Онлайн</a>
+                <a href="#why" onClick={()=>this.handleClick('#why')} className={`nav-link ${this.state.active == '#why'? 'active': ''}`}>Почему</a>
               </li>  */}
+              <li className="nav-item">
+                <a href="#online" onClick={()=>this.handleClick('#online')} className={`nav-link ${this.state.active == '#online'? 'active': ''}`}>Онлайн</a>
+              </li> 
               <li className="nav-item">
                 <a href="#testimonial" onClick={()=>this.handleClick('#testimonial')} className={`nav-link ${this.state.active == '#testimonial'? 'active': ''}`}>Отзывы</a>
               </li> 
