@@ -4,14 +4,34 @@ import close from '../assests/img/close_icon.png'
 import '../assests/css/ogogo.css';
 
 export default class Header extends Component{
-  addShowClass() {  
-    document.getElementById('navbarNav').classList.add('show');
-  }
-  removeShowClass() {  
-    document.getElementById('navbarNav').classList.remove('show');
-  }
+
+    addShowClass() {  
+      document.getElementById('navbarNav').classList.add('show');
+    }
+    removeShowClass() {  
+      document.getElementById('navbarNav').classList.remove('show');
+    }
+
+    //Active Link For Menu
+    state = { active : '#about' };
+
+    componentDidMount(){
+      /** you might as well check if location.pathname includes what you are looking 
+        for before just setting it to state, assuming that there wont be anything 
+        extra; skipping that for simplicity*/
+      this.setState({active: window.location.hash || '#about'});
+    }
+    
+    //When Link Menu clicked
+    handleClick = (activeLink) => {
+      this.setState({active: activeLink});
+    }
+
     render(){  
-        return (<nav className="navbar navbar-expand-lg navbar-light ogogo-nav fixed-top">
+
+      //View 
+        return (
+        <nav className="navbar navbar-expand-lg navbar-light ogogo-nav fixed-top">
         <div className="container">
           <a className="navbar-brand" href="#">
               <img src={logo} alt="ogogo logo" />
@@ -25,22 +45,22 @@ export default class Header extends Component{
             </a>
             <ul className="navbar-nav ms-auto align-items-lg-center">
               <li className="nav-item">
-                <a className="nav-link first active" aria-current="page" href="#about">О нас</a>
+                <a aria-current="page" href="#about" onClick={()=>this.handleClick('#about')} className={`nav-link first ${this.state.active == '#about' ? "active" : ""}`}>О нас</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#courses">Курсы</a>
+                <a href="#courses" onClick={()=>this.handleClick('#courses')} className={`nav-link ${this.state.active == '#courses'? 'active': ''}`}>Курсы</a>
               </li>
+              <li className="nav-item">
+                <a href="#why" onClick={()=>this.handleClick('#why')} className={`nav-link ${this.state.active == '#why'? 'active': ''}`}>Почему</a>
+              </li> 
               {/* <li className="nav-item">
-                <a className="nav-link" href="#why">Почему</a>
+                <a href="#online" onClick={()=>this.handleClick('#online')} className={`nav-link ${this.state.active == '#online'? 'active': ''}`}>Онлайн</a>
               </li>  */}
               <li className="nav-item">
-                <a className="nav-link" href="#online">Онлайн</a>
+                <a href="#testimonial" onClick={()=>this.handleClick('#testimonial')} className={`nav-link ${this.state.active == '#testimonial'? 'active': ''}`}>Отзывы</a>
               </li> 
               <li className="nav-item">
-                <a className="nav-link" href="#testimonial">Отзывы</a>
-              </li> 
-              <li className="nav-item">
-                <a className="nav-link" href="#contact">Контакты</a>
+                <a href="#contact" onClick={()=>this.handleClick('#contact')} className={`nav-link ${this.state.active == '#contact'? 'active': ''}`}>Контакты</a>
               </li> 
               <li className="nav-item">
                 <button className="btn green-btn" data-bs-toggle="modal" data-bs-target="#loginModal">Войти</button>
