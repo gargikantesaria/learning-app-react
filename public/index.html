@@ -54,6 +54,13 @@
         else {
           $(".backToTop").hide()
         }
+
+        if ($(window).scrollTop() > 100) {
+            $(".ogogo-nav").addClass('smallNavBg')
+        }
+        else {
+          $(".ogogo-nav").removeClass('smallNavBg')
+        }
     });
     </script>
     <!--
