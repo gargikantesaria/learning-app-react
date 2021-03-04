@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Header from './layouts/header.js';
+import Container from './layouts/container.js';
+import Footer from './layouts/footer.js';
+import './assests/css/ogogo.css';
+AOS.init({duration:1000});
+class App extends Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  render() {
+    return (
+      <div>
+        {/* Header Menu */}
+        <Header />
+        {/* Layout */}
+        <Container />
+        {/* Footer */}
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;
