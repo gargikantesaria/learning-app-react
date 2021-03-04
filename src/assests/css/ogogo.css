@@ -21,6 +21,7 @@ body{
 .backToTop:hover{
     background-color: #FF7A00;
 }
+.hideLoader{display: none;}
 /* Nav */
 .ogogo-nav{
     background: rgba(0, 0, 0, 0.69);
@@ -66,6 +67,10 @@ body{
 .ogogo-nav .navbar-collapse.collapse{
     right: -350px;
     transition: .3s;
+}
+.ogogo-nav .navbar-collapse.collapse.show{
+    right: -2px;
+    transition: .3s; 
 }
 .ogogo-nav .navbar-collapse.collapse.show{
     width: 80%;
