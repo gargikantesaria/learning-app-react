@@ -1,8 +1,8 @@
 import { Component } from "react";
 import OwlCarousel from 'react-owl-carousel2';
 import ModalVideo from 'react-modal-video';
-
-
+import groupCard from '../assests/img/group_cards.png'
+import groupCardSmall from '../assests/img/groupCard_small.png'
 export default class Container extends Component {
     
     constructor () {
@@ -130,15 +130,15 @@ export default class Container extends Component {
                         <div className="row">
                             <div className="col-lg-10 offset-lg-1">
                                 <div className="row">
-                                    <div className="col-lg-3 text-lg-center">
+                                    <div className="col-lg-3 mb-3 mb-lg-0 text-lg-center">
                                         <img src="assests/img/icon_1.png" alt="" className="img-fluid why-icon" data-aos="zoom-in"/>
                                         <h3 className="why-title">500 кв. м</h3>
                                     </div>
-                                    <div className="col-lg-3 text-lg-center">
+                                    <div className="col-lg-3 mb-3 mb-lg-0 text-lg-center">
                                         <img src="assests/img/icon_2.png" alt="" className="img-fluid why-icon" data-aos="zoom-in" data-aos-delay="100"/>
                                         <h3 className="why-title">Доступ к бесплатному коворкингу</h3>
                                     </div>
-                                    <div className="col-lg-3 text-lg-center">
+                                    <div className="col-lg-3 mb-3 mb-lg-0 text-lg-center">
                                         <img src="assests/img/icon_3.png" alt="" className="img-fluid why-icon" data-aos="zoom-in" data-aos-delay="200"/>
                                         <h3 className="why-title">Помощь менторов 24/7</h3>
                                     </div>
@@ -293,6 +293,11 @@ export default class Container extends Component {
                 <section className="ogogo-youHere-section">
                     <div className="container">
                         <div className="row orange-bg">
+                            <div className="col-lg-6 right-part smallDevice">
+                                <div className="row">
+                                   <marquee> <img src={groupCardSmall} alt="card group" />  </marquee>
+                                </div>
+                            </div>
                             <div className="col-lg-6 align-self-lg-center">
                                 <div className="content-wrapper" data-aos="fade-up">
                                     <h2 className="title">OGOGO ты уже <br /> дошел до сюда? </h2>
@@ -300,53 +305,10 @@ export default class Container extends Component {
                                     <button className="btn white-btn">Оставить заявку</button>
                                 </div>
                             </div>
-                            <div className="col-lg-6 right-part">
+                            <div className="col-lg-6 right-part bigDevice">
                                 <div className="row">
-                                    <div className="col-lg-5">
-                                        <div className="card mb-4" data-aos="fade-up" data-aos-delay="100">
-                                            <img src="assests/img/javascript.png" className="card-img-top" alt="javascript" />
-                                            <div className="card-body">
-                                                <h3 className="card-title">Javascript</h3>
-                                                <p className="card-text">Курс визуальной и практической верстки сайта </p>
-                                            </div>
-                                            <div className="card-footer">
-                                                <a href="#" className="btn btn-link">записаться</a>
-                                            </div>
-                                        </div>
-                                        <div className="card" data-aos="fade-up" data-aos-delay="200">
-                                            <img src="assests/img/ui_ux.png" className="card-img-top" alt="ui ux" />
-                                            <div className="card-body">
-                                                <h3 className="card-title">UI/UX</h3>
-                                                <p className="card-text">Курс создания графических проектов и пользовательского
-                                                    интерфейса</p>
-                                            </div>
-                                            <div className="card-footer">
-                                                <a href="#" className="btn btn-link">записаться</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-5">
-                                        <div className="card mb-4 mt-5" data-aos="fade-up" data-aos-delay="300">
-                                            <img src="assests/img/python.png" className="card-img-top" alt="python" />
-                                            <div className="card-body">
-                                                <h3 className="card-title">Python</h3>
-                                                <p className="card-text">Курс базового знания языка и обработки анализа данных </p>
-                                            </div>
-                                            <div className="card-footer">
-                                                <a href="#" className="btn btn-link">записаться</a>
-                                            </div>
-                                        </div>
-                                        <div className="card" data-aos="fade-up" data-aos-delay="400">
-                                            <img src="assests/img/html_css.png" className="card-img-top" alt="html css" />
-                                            <div className="card-body">
-                                                <h3 className="card-title">HTML/CSS</h3>
-                                                <p className="card-text">Вводный курс по созданию (верстке сайтов)</p>
-                                            </div>
-                                            <div className="card-footer">
-                                                <a href="#" className="btn btn-link">записаться</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <img src={groupCard} alt="card group" /> 
+                                    <img src={groupCard} alt="card group"/>  
                                 </div>
                             </div>
                         </div>

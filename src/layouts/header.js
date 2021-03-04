@@ -30,9 +30,9 @@ export default class Header extends Component{
               <li className="nav-item">
                 <a className="nav-link" href="#courses">Курсы</a>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a className="nav-link" href="#why">Почему</a>
-              </li> 
+              </li>  */}
               <li className="nav-item">
                 <a className="nav-link" href="#online">Онлайн</a>
               </li> 
