@@ -5,7 +5,7 @@ import Header from './layouts/header.js';
 import Container from './layouts/container.js';
 import Footer from './layouts/footer.js';
 import './assests/css/ogogo.css';
-AOS.init({duration:1000});
+AOS.init({duration:1000, startEvent: 'load'});
 class App extends Component {
 
   render() {
