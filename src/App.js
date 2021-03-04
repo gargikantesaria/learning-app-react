@@ -8,6 +8,10 @@ import './assests/css/ogogo.css';
 AOS.init({duration:1000});
 class App extends Component {
 
+  componentDidMount() {
+    this.props.hideLoader();
+  }
+  
   render() {
     return (
       <div>

@@ -23,6 +23,22 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <div id="loader"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+
+      <script>
+        var animation = bodymovin.loadAnimation({
+        // animationData: { /* ... */ },
+        container: document.getElementById('loader'), // required
+        path: 'data.json', // required
+        renderer: 'svg', // required
+        loop: true, // optional
+        autoplay: true, // optional
+        name: "Demo Animation", // optional
+      });
+      </script>
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     
     <script src="assests/js/bootstrap.min.js" ></script>
