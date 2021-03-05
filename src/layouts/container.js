@@ -56,7 +56,7 @@ export default class Container extends Component {
                         <div className="ogogo-hero-content">
                             <h1 className="title" data-aos="fade-up">OGOGO Academy</h1>
                             <p className="subtitle" data-aos="fade-up">самая большая IT академия программирования в Кыргызстане</p>
-                            <button className="btn orange-btn"  data-aos="zoom-in" data-bs-toggle="modal" data-bs-target="#appFormModal">Оставить заявку</button>
+                            <button className="btn orange-btn"  data-bs-toggle="modal" data-bs-target="#appFormModal">Оставить заявку</button>
                         </div>
                     </div>
                 </section>
@@ -295,13 +295,13 @@ export default class Container extends Component {
                         <div className="row orange-bg">
                             <div className="col-lg-6 right-part smallDevice">
                                 <div className="row">
-                                   <marquee> <img src={groupCardSmall} alt="card group" />  </marquee>
+                                   <marquee className="mt-4 mt-lg-0"> <img src={groupCardSmall} alt="card group" />  </marquee>
                                 </div>
                             </div>
                             <div className="col-lg-6 align-self-lg-center">
                                 <div className="content-wrapper" data-aos="fade-up">
-                                    <h2 className="title">OGOGO ты уже <br /> дошел до сюда? </h2>
-                                    <p className="subtitle">Тогда самое время <br />записаться к нам!</p>
+                                    <h2 className="title">OGOGO ты уже  дошел до сюда? </h2>
+                                    <p className="subtitle">Тогда самое время записаться к нам!</p>
                                     <button className="btn white-btn" data-bs-toggle="modal" data-bs-target="#appFormModal">Оставить заявку</button>
                                 </div>
                             </div>
