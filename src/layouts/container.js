@@ -79,7 +79,7 @@ export default class Container extends Component {
                                                     <p className="card-text">Курс базового знания языка и обработки анализа данных </p>
                                         </div>
                                         <div className="card-footer">
-                                                    <a href="#" className="btn btn-link">записаться</a>
+                                                    <a href="#" className="btn btn-link" data-bs-toggle="modal" data-bs-target="#appFormModal">записаться</a>
                                         </div>
                                 </div>
                             </div>
@@ -91,7 +91,7 @@ export default class Container extends Component {
                                                         <p className="card-text">Курс визуальной и практической верстки сайта </p>
                                         </div>
                                         <div className="card-footer">
-                                                        <a href="#" className="btn btn-link">записаться</a>
+                                                        <a href="#" className="btn btn-link" data-bs-toggle="modal" data-bs-target="#appFormModal">записаться</a>
                                         </div>
                                 </div>
                             </div>
@@ -103,7 +103,7 @@ export default class Container extends Component {
                                             <p className="card-text">Курс создания графических проектов и пользовательского интерфейса</p>
                                         </div>
                                         <div className="card-footer">
-                                            <a href="#" className="btn btn-link">записаться</a>
+                                            <a href="#" className="btn btn-link" data-bs-toggle="modal" data-bs-target="#appFormModal">записаться</a>
                                         </div>
                                 </div>
                             </div>
@@ -115,7 +115,7 @@ export default class Container extends Component {
                                             <p className="card-text">Вводный курс по созданию (верстке сайтов)</p>
                                         </div>
                                         <div className="card-footer">
-                                            <a href="#" className="btn btn-link">записаться</a>
+                                            <a href="#" className="btn btn-link" data-bs-toggle="modal" data-bs-target="#appFormModal">записаться</a>
                                         </div>
                                 </div>
                             </div>
@@ -172,7 +172,7 @@ export default class Container extends Component {
                                             {/* <!-- <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                             <p className="card-text">Last updated 3 mins ago</p> --> */}
                                                 <div className="card-footer">
-                                                <button className="btn white-btn">купить курс</button>
+                                                <button className="btn white-btn" data-bs-toggle="modal" data-bs-target="#loginModal">купить курс</button>
                                                 </div>
                                             </div> 
                                         </div>
@@ -183,7 +183,7 @@ export default class Container extends Component {
                                             <div className="card-img-overlay">
                                             <h5 className="card-title">JS</h5> 
                                             <div className="card-footer">
-                                                <button className="btn white-btn">купить курс</button>
+                                                <button className="btn white-btn" data-bs-toggle="modal" data-bs-target="#loginModal">купить курс</button>
                                             </div>
                                             </div> 
                                         </div>
@@ -302,7 +302,7 @@ export default class Container extends Component {
                                 <div className="content-wrapper" data-aos="fade-up">
                                     <h2 className="title">OGOGO ты уже <br /> дошел до сюда? </h2>
                                     <p className="subtitle">Тогда самое время <br />записаться к нам!</p>
-                                    <button className="btn white-btn">Оставить заявку</button>
+                                    <button className="btn white-btn" data-bs-toggle="modal" data-bs-target="#appFormModal">Оставить заявку</button>
                                 </div>
                             </div>
                             <div className="col-lg-6 right-part bigDevice">
