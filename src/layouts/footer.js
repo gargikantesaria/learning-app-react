@@ -36,19 +36,19 @@ export default class Footer extends Component{
                             <div className="col-lg-3" data-aos="fade-up">
                                 <ul className="social mt-4">
                                     <li className="text ">
-                                        <a href="javascript:void(0)">
+                                        <a href="https://wa.me/996550312312">
                                             <i className="bi bi-whatsapp me-2"></i>
                                             WhatsApp
                                         </a>
                                     </li>
                                     <li className="text">
-                                        <a href="javascript:void(0)">
+                                        <a href="http://instagram.com/ogogo_academy">
                                             <i className="bi bi-instagram me-2"></i>
                                             Instagram
                                         </a> 
                                     </li>
                                     <li className="text">
-                                        <a href="javascript:void(0)">
+                                        <a href="http://t.me/ogogo_academy">
                                             <i className="bi bi-telegram me-2"></i>
                                             Telegram
                                         </a> 

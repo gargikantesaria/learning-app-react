@@ -293,9 +293,12 @@ export default class Container extends Component {
                 <section className="ogogo-youHere-section">
                     <div className="container">
                         <div className="row orange-bg">
-                            <div className="col-lg-6 right-part smallDevice">
+                            <div className="col-lg-6 p-0 right-part smallDevice">
                                 <div className="row">
-                                   <marquee className="mt-4 mt-lg-0"> <img src={groupCardSmall} alt="card group" />  </marquee>
+                                    <div className="col-12">
+                                        {/* <marquee className="mt-4 mt-lg-0"> <img src={groupCardSmall} alt="card group" />  </marquee> */}
+                                        <img src={groupCardSmall} alt="card group" className="mt-4 img-fluid"/>  
+                                    </div> 
                                 </div>
                             </div>
                             <div className="col-lg-6 align-self-lg-center">
@@ -307,8 +310,10 @@ export default class Container extends Component {
                             </div>
                             <div className="col-lg-6 right-part bigDevice">
                                 <div className="row">
-                                    <img src={groupCard} alt="card group" /> 
-                                    <img src={groupCard} alt="card group"/>  
+                                    <div className="col-12">
+                                    <img src={groupCard} alt="card group" className="img-fluid" /> 
+                                    <img src={groupCard} alt="card group" className="img-fluid" />  
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -329,7 +334,7 @@ export default class Container extends Component {
                                 </p>
                             </div>
                             <div className="col-lg-5">
-                                <img src="assests/img/certificate.png" alt="certificate" className="img-fluid" data-aos="fade-left"/>
+                                <img src="assests/img/certificate.png" alt="certificate" className="img-fluid shadow" data-aos="fade-left"/>
                             </div>
                         </div>
                     </div>

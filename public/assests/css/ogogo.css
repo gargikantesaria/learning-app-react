@@ -519,6 +519,7 @@ body{
     padding-left: 0;
 }
 .ogogo-youHere-section .smallDevice{
+    overflow: hidden;
     display: none;
 } 
 @media(max-width: 767px){
