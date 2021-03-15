@@ -8,13 +8,14 @@ export default class Container extends Component {
     constructor () {
         super()
         this.state = {
-          isOpen: false
+          isOpen: false,
+          videoLink: ''
         }
         this.openModal = this.openModal.bind(this)
       }
      
-      openModal () {
-        this.setState({isOpen: true})
+      openModal (videoLink) {
+        this.setState({isOpen: true, videoLink: videoLink})
       }
     
     render() { 
@@ -47,6 +48,26 @@ export default class Container extends Component {
                 } 
             }
         };
+
+        //video data
+        const videoData = [
+            {videoLink : 'xbSv27qZNCY', videoImg: 'assests/Thumbnail video/Эльдар.png'},
+            {videoLink : 'U_EIQNSkzuo', videoImg: 'assests/Thumbnail video/Айзат.png'},
+            {videoLink : 'oAT5wLZ1stE', videoImg: 'assests/Thumbnail video/Алина.png'},
+            {videoLink : 'e-ds-A5_ZCk', videoImg: 'assests/Thumbnail video/Гулина.png'},
+            {videoLink : 'KBi2hRwo4do', videoImg: 'assests/Thumbnail video/Данил.png'},
+            {videoLink : 'KxeeuUoMeMw', videoImg: 'assests/Thumbnail video/Жантай.png'},
+            {videoLink : 'vPYPT6gkNeY', videoImg: 'assests/Thumbnail video/Катя.png'},
+            {videoLink : '9JaeFeWDpp8', videoImg: 'assests/Thumbnail video/Максим и Богдан.png'},
+            {videoLink : 'rkEi5EAYroM', videoImg: 'assests/Thumbnail video/Расул.png'},
+            {videoLink : '79xM0qVwF6k', videoImg: 'assests/Thumbnail video/Сейтек.png'},
+            {videoLink : '4MVf-qXHE9M', videoImg: 'assests/Thumbnail video/Тим.png'},
+            {videoLink : 'YYv2LlsCR-A', videoImg: 'assests/Thumbnail video/Улушка.png'},
+            {videoLink : 'OQCmXNlPp3U', videoImg: 'assests/Thumbnail video/Хатам.png'},
+            {videoLink : 'Y5ozWzgyh_0', videoImg: 'assests/Thumbnail video/Айдай.png'},
+            {videoLink : 'Aue7oPglEss', videoImg: 'assests/Thumbnail video/Эмир.png'},
+            {videoLink : 'DvIW0ahP9Do', videoImg: 'assests/Thumbnail video/Эмир22.png'},
+        ]
 
         return (
             <div>
@@ -211,11 +232,12 @@ export default class Container extends Component {
                         
                         <div className="" data-aos="fade-up" data-aos-delay="100">
                             <OwlCarousel ref="gallery" options={options}>
-                                <div>
+                            {videoData.map(item => 
+                            <div>
                                     <div className="testi-item-wrapper">
                                         <div className="testi-item">
-                                            <img src="assests/img/testimonial.png" className="img-fluid" />
-                                            <a href="javascript:void(0)" className="overlay" onClick={this.openModal}>
+                                            <img src={item.videoImg} className="img-fluid" />
+                                            <a href="javascript:void(0)" className="overlay" onClick={() => this.openModal(item.videoLink)}>
                                                 <i className="bi bi-play-circle"></i>
                                             </a>
                                         </div>
@@ -223,66 +245,8 @@ export default class Container extends Component {
                                         <p className="subtitle">Студент “ogogo school”</p>
                                     </div>
                                 </div>
-                                <div>
-                                    <div className="testi-item-wrapper">
-                                        <div className="testi-item">
-                                            <img src="assests/img/testimonial.png" className="img-fluid" />
-                                            <a href="javascript:void(0)" className="overlay" onClick={this.openModal}>
-                                                <i className="bi bi-play-circle"></i>
-                                            </a>
-                                        </div>
-                                        <h3 className="title">Александр Климов</h3>
-                                        <p className="subtitle">Студент “ogogo school”</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="testi-item-wrapper">
-                                        <div className="testi-item">
-                                            <img src="assests/img/testimonial.png" className="img-fluid" />
-                                            <a href="javascript:void(0)" className="overlay" onClick={this.openModal}>
-                                                <i className="bi bi-play-circle"></i>
-                                            </a>
-                                        </div>
-                                        <h3 className="title">Александр Климов</h3>
-                                        <p className="subtitle">Студент “ogogo school”</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="testi-item-wrapper">
-                                        <div className="testi-item">
-                                            <img src="assests/img/testimonial.png" className="img-fluid" />
-                                            <a href="javascript:void(0)" className="overlay" onClick={this.openModal}>
-                                                <i className="bi bi-play-circle"></i>
-                                            </a>
-                                        </div>
-                                        <h3 className="title">Александр Климов</h3>
-                                        <p className="subtitle">Студент “ogogo school”</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="testi-item-wrapper">
-                                        <div className="testi-item">
-                                            <img src="assests/img/testimonial.png" className="img-fluid" />
-                                            <a href="javascript:void(0)" className="overlay" onClick={this.openModal}>
-                                                <i className="bi bi-play-circle"></i>
-                                            </a>
-                                        </div>
-                                        <h3 className="title">Александр Климов</h3>
-                                        <p className="subtitle">Студент “ogogo school”</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="testi-item-wrapper">
-                                        <div className="testi-item">
-                                            <img src="assests/img/testimonial.png" className="img-fluid" />
-                                            <a href="javascript:void(0)" className="overlay" onClick={this.openModal}>
-                                                <i className="bi bi-play-circle"></i>
-                                            </a>
-                                        </div>
-                                        <h3 className="title">Александр Климов</h3>
-                                        <p className="subtitle">Студент “ogogo school”</p>
-                                    </div>
-                                </div>
+                            )} 
+                                
                             </OwlCarousel>
                         </div>
                         
@@ -341,7 +305,7 @@ export default class Container extends Component {
                 </section>
 
                 {/* Video Model */}
-                <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='L61p2uyiMSo' onClose={() => this.setState({isOpen: false})} />
+                <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId={this.state.isOpen ? this.state.videoLink : ''} onClose={() => this.setState({isOpen: false, videoLink : ''})} />
             </div>
         )
     }
