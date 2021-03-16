@@ -49,6 +49,9 @@ export default class Container extends Component {
             }
         };
 
+        //hero background video link
+        const backVideoLink = "https://www.youtube.com/embed/mkggXE5e2yk?playlist=mkggXE5e2yk&autoplay=1&loop=1&controls=0&mute=1";
+
         //video data
         const videoData = [
             {videoLink : 'xbSv27qZNCY', videoImg: 'assests/Thumbnail video/Эльдар.png', name: 'Эльдар', subText: 'Студент курса “JavaScript”'},
@@ -72,7 +75,12 @@ export default class Container extends Component {
         return (
             <div>
                 {/* <!--Hero Section--> */}
-                <section className="ogogo-hero-section" id="about" style={{ "backgroundImage": "url(assests/img/Ж†≠в†©0.png)", "backgroundSize": "cover", "backgroundRepeat": "no-repeat", "backgroundPosition": "center" }}>
+                <iframe width="100%" height="703" style={{"position":"absolute"}} src={backVideoLink} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                {/* <video className='videoTag' autoPlay loop muted>
+                    <source src={backVideoLink} type='video/mp4' />
+                </video> */}
+                {/* <section className="ogogo-hero-section" id="about" style={{ "backgroundImage": "url(assests/img/Ж†≠в†©0.png)", "backgroundSize": "cover", "backgroundRepeat": "no-repeat", "backgroundPosition": "center" }}> */}
+                <section className="ogogo-hero-section" id="about" >
                     <div className="container">
                         <div className="ogogo-hero-content">
                             <h1 className="title" data-aos="fade-up">OGOGO Academy</h1>
