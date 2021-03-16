@@ -2,7 +2,21 @@ import { Component } from "react";
 import '../assests/css/ogogo.css';
 
 export default class Footer extends Component{
+
+    constructor () {
+        super()
+        this.state = {
+          isLogin: false,
+        }
+        this.loginButtonClick = this.loginButtonClick.bind(this);
+    }
+
+    loginButtonClick(){
+        this.setState({isLogin: true});
+    }
+
     render(){
+
         return(
             <div>
                 <footer className="ogogo-footer" id="contact">
@@ -26,8 +40,8 @@ export default class Footer extends Component{
                             </div>
                             <div className="col-lg-3" data-aos="fade-up">
                                 <p className="text mt-4">
-                                    +996 (550) 312312 <br />
-                                    ogogo@gmail.com
+                                    <a href="tel:+996 (550) 312312">+996 (550) 312312</a> <br />
+                                    <a href="mailto:ogogoacademy@gmail.com">ogogoacademy@gmail.com</a>
                                 </p>
                                 <p className="subtext">
                                     Лицензия на образовательную деятельность <br /> № LS200001652 от 03 декабрь 2021
@@ -81,14 +95,6 @@ export default class Footer extends Component{
                                 <input type="password" className="form-control" />
                             </form>
                         </div>
-                        <div className="modal-body d-none">
-                            <h2 className="ogogo-login-success">
-                                Заявка <br /> подана
-                            </h2>    
-                            <p className="ogogo-login-success-text">
-                                В ближайшее время с<br />  вами свяжется наш<br />  менеджер.
-                            </p>
-                        </div>
                         <div className="modal-footer">
                         <button type="button" className="btn w-100 btn-secondary green-btn" data-bs-dismiss="modal">Войти</button> 
                         </div>
@@ -101,12 +107,12 @@ export default class Footer extends Component{
                 <div className="modal-dialog modal-sm">
                     <div className="modal-content">
                     <div className="modal-header">
-                        <h5 className="modal-title" id="appFormModalLabel">
+                        <h5 className={this.state.isLogin ? "modal-title d-none" : "modal-title"} id="appFormModalLabel">
                         Заполните <br /> заявку
                         </h5>
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={() => this.setState({isLogin: false})}></button>
                     </div>
-                    <div className="modal-body">
+                    <div className={this.state.isLogin ? "modal-body d-none"  : "modal-body"}>
                         <form>
                             <label>Выбранная услуга</label>
                             <select className="form-select mb-3">
@@ -134,8 +140,16 @@ export default class Footer extends Component{
                             </div>
                         </form>
                     </div>
-                    <div className="modal-footer">
-                        <button type="button" className="btn w-100 btn-secondary orange-btn" data-bs-dismiss="modal">Оставить заявку</button> 
+                    <div className={this.state.isLogin ? "modal-body" : "modal-body d-none" }>
+                            <h2 className="ogogo-login-success">
+                                Заявка <br /> подана
+                            </h2>    
+                            <p className="ogogo-login-success-text">
+                                В ближайшее время с<br />  вами свяжется наш<br />  менеджер.
+                            </p>
+                        </div>
+                    <div className={this.state.isLogin ? "modal-footer d-none" : "modal-footer"}>
+                        <button type="button" className="btn w-100 btn-secondary orange-btn" onClick={this.loginButtonClick}>Оставить заявку</button> 
                     </div>
                     </div>
                 </div>

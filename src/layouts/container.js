@@ -51,22 +51,22 @@ export default class Container extends Component {
 
         //video data
         const videoData = [
-            {videoLink : 'xbSv27qZNCY', videoImg: 'assests/Thumbnail video/Эльдар.png'},
-            {videoLink : 'U_EIQNSkzuo', videoImg: 'assests/Thumbnail video/Айзат.png'},
-            {videoLink : 'oAT5wLZ1stE', videoImg: 'assests/Thumbnail video/Алина.png'},
-            {videoLink : 'e-ds-A5_ZCk', videoImg: 'assests/Thumbnail video/Гулина.png'},
-            {videoLink : 'KBi2hRwo4do', videoImg: 'assests/Thumbnail video/Данил.png'},
-            {videoLink : 'KxeeuUoMeMw', videoImg: 'assests/Thumbnail video/Жантай.png'},
-            {videoLink : 'vPYPT6gkNeY', videoImg: 'assests/Thumbnail video/Катя.png'},
-            {videoLink : '9JaeFeWDpp8', videoImg: 'assests/Thumbnail video/Максим и Богдан.png'},
-            {videoLink : 'rkEi5EAYroM', videoImg: 'assests/Thumbnail video/Расул.png'},
-            {videoLink : '79xM0qVwF6k', videoImg: 'assests/Thumbnail video/Сейтек.png'},
-            {videoLink : '4MVf-qXHE9M', videoImg: 'assests/Thumbnail video/Тим.png'},
-            {videoLink : 'YYv2LlsCR-A', videoImg: 'assests/Thumbnail video/Улушка.png'},
-            {videoLink : 'OQCmXNlPp3U', videoImg: 'assests/Thumbnail video/Хатам.png'},
-            {videoLink : 'Y5ozWzgyh_0', videoImg: 'assests/Thumbnail video/Айдай.png'},
-            {videoLink : 'Aue7oPglEss', videoImg: 'assests/Thumbnail video/Эмир.png'},
-            {videoLink : 'DvIW0ahP9Do', videoImg: 'assests/Thumbnail video/Эмир22.png'},
+            {videoLink : 'xbSv27qZNCY', videoImg: 'assests/Thumbnail video/Эльдар.png', name: 'Эльдар', subText: 'Студент курса “JavaScript”'},
+            {videoLink : 'U_EIQNSkzuo', videoImg: 'assests/Thumbnail video/Айзат.png', name: 'Айзат', subText: 'Студентка курса “HTML/CSS”'},
+            {videoLink : 'oAT5wLZ1stE', videoImg: 'assests/Thumbnail video/Алина.png', name: 'Алина', subText: 'Студентка курса “Python”'},
+            {videoLink : 'e-ds-A5_ZCk', videoImg: 'assests/Thumbnail video/Гулина.png', name: 'Гулина', subText: 'Студентка курса “JavaScript”'},
+            {videoLink : 'KBi2hRwo4do', videoImg: 'assests/Thumbnail video/Данил.png', name: 'Данил', subText: 'Студент курса “Python”'},
+            {videoLink : 'KxeeuUoMeMw', videoImg: 'assests/Thumbnail video/Жантай.png', name: 'Жантай', subText: 'Студент курса “JavaScript”'},
+            {videoLink : 'vPYPT6gkNeY', videoImg: 'assests/Thumbnail video/Катя.png', name: 'Екатерина', subText: 'Студентка курса “UX/UI”'},
+            {videoLink : '9JaeFeWDpp8', videoImg: 'assests/Thumbnail video/Максим и Богдан.png', name: 'Максим и Богдан', subText: 'Студенты курса “JavaScript”'},
+            {videoLink : 'rkEi5EAYroM', videoImg: 'assests/Thumbnail video/Расул.png', name: 'Расул', subText: 'Студент курса “Python”'},
+            {videoLink : '79xM0qVwF6k', videoImg: 'assests/Thumbnail video/Сейтек.png', name: 'Сейтек', subText: 'Студент курса “JavaScript”'},
+            {videoLink : '4MVf-qXHE9M', videoImg: 'assests/Thumbnail video/Тим.png', name: 'Тим', subText: 'Студент курса “UX/UI”'},
+            {videoLink : 'YYv2LlsCR-A', videoImg: 'assests/Thumbnail video/Улушка.png', name: 'Улукбек', subText: 'Студент курса “JavaScript”'},
+            {videoLink : 'OQCmXNlPp3U', videoImg: 'assests/Thumbnail video/Хатам.png', name: 'Хатам', subText: 'Студент курса “JavaScript”'},
+            {videoLink : 'Y5ozWzgyh_0', videoImg: 'assests/Thumbnail video/Айдай.png', name: 'Айдай', subText: 'Студентка курса “JavaScript”'},
+            {videoLink : 'Aue7oPglEss', videoImg: 'assests/Thumbnail video/Эмир.png', name: 'Эмир', subText: 'Студент курса “Python”'},
+            {videoLink : 'DvIW0ahP9Do', videoImg: 'assests/Thumbnail video/Эмир22.png', name: 'Эмир', subText: 'Студент курса “JavaScript”'},
         ]
 
         return (
@@ -241,8 +241,8 @@ export default class Container extends Component {
                                                 <i className="bi bi-play-circle"></i>
                                             </a>
                                         </div>
-                                        <h3 className="title">Александр Климов</h3>
-                                        <p className="subtitle">Студент “ogogo school”</p>
+                                        <h3 className="title">{item.name}</h3>
+                                        <p className="subtitle">{item.subText}</p>
                                     </div>
                                 </div>
                             )} 
